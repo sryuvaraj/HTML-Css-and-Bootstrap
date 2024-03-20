@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DJD</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="preload" href="https://www1.djicdn.com/assets/fonts/fontawesome/fontawesome-webfont-261feaba0e71dad626c7bb4b15060e69.woff2?v=4.4.0" as="font" data-prophet-rank="4000" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+        }
+
+        .row{
+            margin: 0px;
+        }
+
+        .banner-btn-box{
+            display: flex;
+            justify-content: center;
+        }
+
+        .btton{
+            color: #fff;
+            border: 2px solid #fff;
+            border-radius: 70px;
+            padding: 2px 10px;
+            margin: 5px;
+        }
+
+        a{
+            list-style: none;   
+            text-decoration: none;
+        }
+
+        #carouselOne{
+            background-image: url("https://dji-official-fe.djicdn.com/cms/uploads/d4e8e295ca6f4e4146b744943ea6a9fd.jpg");
+            height: 100vh;
+            width: 100%;
+            text-align: center;
+            color: #fff;
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: auto 800px;
+            background-color: #ededed;
+            padding-top: 10vh;
+        }
+
+        #carouselTwo{
+            background-image: url("https://dji-official-fe.djicdn.com/cms/uploads/a9b0636a0208b6467b18abcf6f8bb06d.jpg");
+            height: 100vh;
+            width: 100%;
+            text-align: center;
+            color: #fff;
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: auto 800px;
+            background-color: #ededed;
+            padding-top: 10vh;
+        }
+
+        #carouselThree{
+            background-image: url("https://dji-official-fe.djicdn.com/cms/uploads/e64d421632de007395222eb0cce98fe7.jpg");
+            height: 100vh;
+            width: 100%;
+            text-align: center;
+            color: #fff;
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: auto 800px;
+            background-color: #ededed;
+            padding-top: 10vh;
+        }
+
+        #carouselFour{
+            background-image: url("https://dji-official-fe.djicdn.com/cms/uploads/943efdcdbb68ccad90c65d7a8b9f38ed@origin.jpg");
+            height: 100vh;
+            width: 100%;
+            text-align: center;
+            color: #fff;
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: auto 800px;
+            background-color: #ededed;
+            padding-top: 10vh;
+        }
+
+        
+        #carouselFive{
+            background-image: url("https://dji-official-fe.djicdn.com/cms/uploads/81b484ebfa1d073281c2e2ee6eca7cd1.jpg");
+            height: 100vh;
+            width: 100%;
+            text-align: center;
+            color: #fff;
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: auto 800px;
+            background-color: #ededed;
+            padding-top: 10vh;
+        }
+
+
+        #div1{
+            background-image: url("https://www1.djicdn.com/cms/uploads/dc9e619bc6ac2bc59d17d0bcaff58b3f.webp");
+            text-align: center;
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: auto 800px;
+            background-color: #ededed;
+            border: 10px solid #fff;
+        }
+        #div2{
+            background-image: url("https://www1.djicdn.com/cms/uploads/9f9b989bf3469fd371376e08235724dc.webp");
+            text-align: center;
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: auto 800px;
+            background-color: #ededed;
+            border: 10px solid #fff;
+        }
+        #div3{
+            background-image: url("https://www1.djicdn.com/cms/uploads/9fe5eb1d832cdcb26a25f500ed423a80.webp");
+            text-align: center;
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: auto 800px;
+            background-color: #ededed;
+            border: 10px solid #fff;
+        }
+        #div4{
+            background-image: url("https://www1.djicdn.com/cms/uploads/6cbcec2f6e38efdccad35fa1c810e10d.webp");
+            text-align: center;
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: auto 800px;
+            background-color: #ededed;
+            border: 10px solid #fff;
+        }
+
+        .theme-dark {
+            max-width: 520px;
+            padding-top: 48px;
+            margin: auto;
+            text-align: center;
+            height: 90vh;
+        }
+
+        .carousalDiv{  
+            position: relative;
+            top: 0;
+            right: 0;
+        }
+
+        nav{
+            position: absolute;
+        }
+
+        nav .navbar{
+            background-color:red; 
+             box-shadow: none;
+        }
+
+        #filedsDiv1{
+            background-image: url("https://dji-official-fe.djicdn.com/cms/uploads/a9b0636a0208b6467b18abcf6f8bb06d.jpg");
+            height: 60vh;
+            background-size: cover;
+            background-position: center;
+            padding-top: 20px;
+        }
+        #filedsDiv2{
+            background-image: url("https://dji-official-fe.djicdn.com/cms/uploads/e64d421632de007395222eb0cce98fe7.jpg");
+            height: 60vh;
+            background-size: cover;
+            background-position: center;
+            padding-top: 20px;
+        }
+        #filedsDiv3{
+            background-image: url("https://dji-official-fe.djicdn.com/cms/uploads/81b484ebfa1d073281c2e2ee6eca7cd1.jpg");
+            height: 60vh;
+            background-size: cover;
+            background-position: center;
+            padding-top: 20px;
+        }
+
+        .cart{
+            padding:80px 0px;
+        }
+
+        img{
+            display: block;
+            margin: 0 auto; 
+        }
+
+        .foterUl ul {
+            list-style: none;
+            text-decoration: none;
+            padding:0px 40px;
+        }
+
+        .foterUl ul li {
+            padding: 7px;
+        }
+
+        .foterUl ul li:first-child {
+            font-weight: bold;
+        }
+
+        .social li{
+            padding: 10px;
+            list-style:  none;
+            text-decoration: none;
+        }
+
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"><img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDIiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCA0MiAyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNMzIuNTQ4NDE2MyA0Ljg4MTM1NTFjLS43MDM0MjIxIDIuNjEzNzk5Ny0xLjQwMzY4MzEgNS4yMjgzNDMyLTIuMDg5NjI2NiA3Ljg0Njc5MTUtLjM0MzA2NDcgMS4zMDkwMzgzLS42Nzk4MDczIDIuNjE5MDA2Mi0xLjA3NDc1MDEgMy45MTQyODQ2LS4zODM2MDAzIDEuMjU4NDYxNy0uODU0Nzc5NyAyLjYwMTcxMzQtMS41NDE0NjY5IDMuNzQ0NzA0Ni0uNzE2MjUyMSAxLjE5MjgyMzktMS42NDM3MzU1IDIuMTI0MjEyLTIuOTI3Mjk5NSAyLjcyMDUzMS0uNTEzMjAyNS4yMzgxOTI5LTEuMDM5MDQ5MS40MDE2MzY3LTEuNTkwNzQxNy41MTg1OTQ4LS43ODI4MTk4LjE2NTg2MTEtMS41NjkxNzI0LjIzNDEwMjEtMi4zNjQ2MzYyLjI3OTEwMDMtMS45Njk4Nzk0LjExMTAwOC02LjE0ODc2MDcuMDk0NDU5LTguMTE4MDgyMy4wOTQ0NTlsMS4yMDczMjc0LTQuNDc0NTMwNmMuOTEzOTA5NSAwIDEuODI3NjMzMS4wMDMxNjExIDIuNzQxMzU2Ni0uMDIyMTI3Mi44ODE3NDE0LS4wMjQ1NDQ0IDEuODUxOTkxNi0uMDcxNzczOSAyLjcyMDM0NS0uMjc3MDU0OS45NTA5MTIyLS4yMjQ5OTEgMS42Njg0NjU5LS42MTEwMDg1IDIuMjk2OTUzLTEuMzg0NzE3LjU3MjUxODMtLjcwNDcyMzcuOTU3NDIwMS0xLjU4NDA0NzggMS4yNzI3Nzk0LTIuNDEzMzUzMy41NzYwNTExLTEuNTE0NTA1MSAxLjE2NTg2MjEtMy42ODI5NzE1IDEuNTgxNjMwNS01LjI0MjQ3NDguNDcwMjQ5Ny0xLjc2NTM0MjIuOTIyMjc2OS0zLjUzNTE0NyAxLjM3NzgzNzEtNS4zMDQyMDh6bTguMTM1NTQyMy0uMDAwMDM3MmwtMy41MTIwOSAxMy4wMTY5MzQ2aC02LjUwODE4ODRsMy41MTE5MDQxLTEzLjAxNjkzNDZoNi41MDgzNzQzek0xOS4yMjExODAxIDBoNi41MDgzNzQ0Yy0uNjgxODUyNyAyLjU0MDkxMDEtMS4zNjI3NzU3IDUuMDgyMDA2MS0yLjA1MjQzOCA3LjYyMDg3MDktLjQ4MDY2MjUgMS43Njg2ODktLjk1Nzk3OCAzLjUzODEyMi0xLjQ3OTczMzkgNS4yOTU0Njg2LS4yMjc1OTQxLjc2NjA4NDgtLjQ1NDgxNjQgMS41Mjk5Mzg0LS43NTMwNjg4IDIuMjczNzEwMS0uMjM5NjgwNS41OTc0MzQ2LS41MDc2MjQyIDEuMTI5MDQ1NS0xLjAwMjk3NjIgMS41NzU0OTQ0LS4zNzAwMjY0LjMzMzM5NTctLjc3MzUyMjUuNTQwNzIyLTEuMjQzNDAwMy42ODg1NDY3LS42MDQ1MDA1LjE5MDIxOTYtMS4yMTU1MDg5LjI1OTk0ODItMS44NDAwOTEyLjMxMTA4MjUtLjg5ODI5MDMuMDczNjMzNC0xLjc5Njc2NjUuMDkyNDEzNi0yLjY5NjU0NDQuMTA2OTE3Mi0yLjA2OTM1ODguMDMzMjgzOC01LjgyNzI2NTMuMDI4NjM1Mi03Ljg5NjYyNDIuMDE5NzA5OS0uNzQzNTg1OC0uMDAzMzQ2OS0xLjQ4NzE3MTUtLjAwNzgwOTYtMi4yMzA3NTczLS4wMjEzODM0LS41MzkwNDg1LS4wMDk2NjktMS4wNzc1MzkyLS4wMjMwNTY5LTEuNjE1ODQ0LS4wNTY3MTI2LS4zNTk0Mjc3LS4wMjI2ODUtLjcxNjA2NjItLjA1MjgwNzgtMS4wNzEyMTcyLS4xMTgyNTk3LS4yNDA5ODItLjA0NDI1NDQtLjQ3MzAzODgtLjEwMzc1NjItLjY5OTE0NTQtLjIwMjQ5MTktLjc0NDcwMTQtLjMyNTQwMDEtMS4xMjQyMTEtLjk3NTgyODQtMS4xNDYzMzgyLTEuNzY3OTQ1My0uMDEyODMtLjQ1MzMyODkuMDY2MDA5OC0uODg1MDg4My4xNTY3NS0xLjMyMzU0MTguMTI4ODU4NC0uNjIxMDQ5My4yODkzMjcxLTEuMjMzNTQ1My40NDgzMDgzLTEuODQ2Nzg1MS4zMDM0NTg5LTEuMTcxNjI2NC44NTg4NzA0LTMuMzMzMzk4OSAxLjI5MTc0NTUtNC40NzEzNjk2LjMzOTE2LS44OTE3ODIzLjc4NzA5NjQtMS43NzkyODc4IDEuNjM4MTU3Mi0yLjM0MzgxMDYuNDc1ODI4LS4zMTU1NDUxLjk3NTgyODUtLjQ4MzI2NTYgMS41MjcxNDkzLS41OTQyNzM2LjQwODcwMjUtLjA4MjE4NjcuODE5NDUwNS0uMTI1Njk3NCAxLjIzMzkxNzItLjE1NjU2NC42OTQxMjUtLjA1MTUwNjEgMS4zODg4MDc4LS4wNjc2ODMxIDIuMDg0MjM0My0uMDc5OTU1NC45ODgyODY3LS4wMTcyOTI3IDEuOTc2NTczMy0uMDIxMDExNSAyLjk2NDg2LS4wMjM5ODY2bDIuNDY1MzAxLS4wMDMzNDdoMi40NjUxNjE2bC0uODc4MDIyNSAzLjI1NDE4NzJjLTEuNDY1MjMwMiAwLTIuOTMwMDg4Ni0uMDA0MDkwOC00LjM5NTMxODkuMDA0NDYyNi0uNDI3NjY4Ny4wMDI2MDMyLS44NTQ3Nzk2LS4wMDA1NTc4LTEuMjgyMDc2NC4wMjczMzM2LS4xNTE3Mjk1LjAwOTg1NS0uMjk5OTI2LjAxOTcxLS40NDY2MzUuMDcxMDMwMi0uMTkzMDA4Ny4wNjY5Mzk1LS4yODgzOTc1LjE4ODE3NDMtLjM3MzE4NzQuMzYyMjE2OS0uMTI0MDI0LjI1NDc0MTgtLjE5NTYxMi41MjM0MjkzLS4yNzQ2Mzc3Ljc5MjMwMjgtLjEyMDY3Ny40MTA1NjItLjIzMjQyODcuODIzNTQxMi0uMzQ0MzY2MyAxLjIzNjcwNjQtLjE3MjM2OTEuNjM2NDgyNi0uMzQ0NzM4MiAxLjI3Mjk2NTItLjUwODM2OCAxLjkxMTg2NTEtLjA2MDQzMTQuMjM2NTE5NC0uMTE5NzQ3Mi40NzMwMzg5LS4xNzA2OTU2LjcxMTc4OTYtLjAzNTg4Ny4xNjczNDg2LS4wNjgyNDEuMzM0MTM5NC0uMDg0MjMyMS41MDQ4MzUtLjAxNzQ3ODcuMTg2Njg2Ny0uMDIyODcxLjQxMDkzMzkuMDkwMTgyMy41ODQyMzI3LjExNDkxMjcuMTc1OTAyLjMwOTIyMy4yMTY4MDk0LjQ5MDUxNzQuMjQzMDI3NC4yMDQ5MDkxLjAyOTkzNjguNDEwMTkwMS4wMzY0NDQ4LjYxNjIxNDkuMDQyNTgwOS4zMzczMDA0LjAxMDIyNjkuNjc0NjAxLjAxMTcxNDQgMS4wMTE5MDE0LjAxMzM4NzkuOTIyODM0Ny4wMDQ0NjI2IDEuODQ1NjY5NS4wMDQ2NDg2IDIuNzY4NTA0Mi0uMDAxMTE1Ni40MjUyNTE1LS4wMDI2MDMyLjg1MDEzMTEtLjAwNTU3ODMgMS4yNzUwMTA3LS4wMjI2ODUxLjI5MjY3NDEtLjAxMTcxNDQuNTgxNjI5NS0uMDIxNzU1My44Njk4NDEtLjA5MTQ4MzkuMjE5MDQwOC0uMDUyOTkzNy4zOTAyOTQyLS4xMzYyOTYyLjUzODQ5MDctLjMxNTM1OTIuMTAwMjIzMi0uMTIxMjM0OC4xNjU2NzUyLS4yNTU2NzE1LjIyNTU0ODgtLjM5ODQ3NTcuMTQ4NzU0My0uMzU0MDM1My4yNTI2OTY0LS43MjA1Mjg4LjM2MTEwMTEtMS4wODY4MzY0LjQxNTk1NDQtMS40MDUxNzA3Ljc5MDYyOTQtMi44MjExMjYgMS4xNzM0ODU5LTQuMjM1NDA4bDEuMTQzNDA5NS00LjI0NDE0NzNMMTkuMjIxMTgwMSAwaDYuNTA4Mzc0NHoiIGZpbGwtcnVsZT0iZXZlbm9kZCIgZmlsbC1vcGFjaXR5PSIuODUiLz48L3N2Zz4=" alt="logo"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarScroll">
+            <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+              <li class="nav-item">
+                <a class="nav-link text-dark" aria-current="page" href="#">Camera Drones</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-dark" href="#">Handheld</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Specialized
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-dark" href="#" tabindex="-1" aria-disabled="true">Explore</a>
+              </li>
+            </ul>
+            <form class="d-flex">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success search-btn" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+
+<div class="carousalDiv">
+    <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active" id="carouselOne">
+            <div class="banner-text">
+                <div class="top-content">
+                    <div class="eyebrow-text eyebrow">1″ CMOS Pocket Gimbal Camera                        
+                    </div>
+                </div>
+                <img style="height:32px" alt="osmo-pocket-3" class="banner-logo banner-headline swiper-lazy swiper-lazy-loaded" src="https://www1.djicdn.com/cms/uploads/f96569e53307cad64f824f940a968c6c.svg">
+                <h2 class="headline visuallyhidden">osmo-pocket-3</h2>
+                <h3 class="banner-slogan">For Moving Moments</h3>
+            </div>
+            <div class="banner-btn-box"> 
+                <a href="https://www.dji.com/global/mavic-3-pro?site=brandsite&amp;from=homepage" data-ga-category="pc-homepage" data-ga-action="click" data-ga-label="kv-banner_mavic-3-pro_learn-more-link" aria-label="Learn More mavic-3-pro" class="banner-button ga-data" tabindex="0">
+                    <div class="text btton">Learn More</div>
+                    <div class="icon fa fa-angle-right"></div>
+                </a>
+                <a href="https://www.dji.com/global/where-to-buy" data-ga-category="pc-homepage" data-ga-action="click" data-ga-label="kv-banner_mavic-3-pro_buy-now-link" aria-label="Buy Now mavic-3-pro" class="banner-button ga-data" tabindex="0">
+                    <div class="text btton">Buy Now</div>
+                    <div class="icon fa fa-angle-right">
+                    </div>
+                </a>
+            </div>
+          </div>
+          <div class="carousel-item" id="carouselTwo">
+            <div class="banner-text">
+                <div class="top-content">
+                    <div class="eyebrow-text eyebrow">Triple-Lens Camera Drone</div>
+                </div>
+                <img style="height:32px" alt="mavic-3-pro" class="banner-logo banner-headline swiper-lazy swiper-lazy-loaded" src="https://www1.djicdn.com/cms/uploads/a02a6a51b25f2b54e7e8979e87e3dabc.svg">
+                <h2 class="headline visuallyhidden">mavic-3-pro</h2>
+                <h3 class="banner-slogan">Inspiration in Focus</h3>
+            </div>
+            <div class="banner-btn-box"> 
+                <a href="https://www.dji.com/global/mavic-3-pro?site=brandsite&amp;from=homepage" data-ga-category="pc-homepage" data-ga-action="click" data-ga-label="kv-banner_mavic-3-pro_learn-more-link" aria-label="Learn More mavic-3-pro" class="banner-button ga-data" tabindex="0">
+                    <div class="text btton">Learn More</div>
+                    <div class="icon fa fa-angle-right"></div>
+                </a>
+                <a href="https://www.dji.com/global/where-to-buy" data-ga-category="pc-homepage" data-ga-action="click" data-ga-label="kv-banner_mavic-3-pro_buy-now-link" aria-label="Buy Now mavic-3-pro" class="banner-button ga-data" tabindex="0">
+                    <div class="text btton">Buy Now</div>
+                    <div class="icon fa fa-angle-right">
+                    </div>
+                </a>
+            </div>
+          </div>
+          <div class="carousel-item" id="carouselThree">
+            <div class="banner-text">
+                <div class="top-content">
+                    <div class="eyebrow-text eyebrow">1″ CMOS Pocket Gimbal Camera                        
+                    </div>
+                </div>
+                <img style="height:32px" alt="osmo-pocket-3" class="banner-logo banner-headline swiper-lazy swiper-lazy-loaded" src="https://www1.djicdn.com/cms/uploads/f96569e53307cad64f824f940a968c6c.svg">
+                <h2 class="headline visuallyhidden">osmo-pocket-3</h2>
+                <h3 class="banner-slogan">For Moving Moments</h3>
+            </div>
+            <div class="banner-btn-box"> 
+                <a href="https://www.dji.com/global/mavic-3-pro?site=brandsite&amp;from=homepage" data-ga-category="pc-homepage" data-ga-action="click" data-ga-label="kv-banner_mavic-3-pro_learn-more-link" aria-label="Learn More mavic-3-pro" class="banner-button ga-data" tabindex="0">
+                    <div class="text btton">Learn More</div>
+                    <div class="icon fa fa-angle-right"></div>
+                </a>
+                <a href="https://www.dji.com/global/where-to-buy" data-ga-category="pc-homepage" data-ga-action="click" data-ga-label="kv-banner_mavic-3-pro_buy-now-link" aria-label="Buy Now mavic-3-pro" class="banner-button ga-data" tabindex="0">
+                    <div class="text btton">Buy Now</div>
+                    <div class="icon fa fa-angle-right">
+                    </div>
+                </a>
+            </div>
+          </div>
+          <div class="carousel-item" id="carouselFour">
+            <div class="banner-text">
+                <div class="top-content">
+                    <div class="eyebrow-text eyebrow">1″ CMOS Pocket Gimbal Camera                        
+                    </div>
+                </div>
+                <img style="height:32px" alt="osmo-pocket-3" class="banner-logo banner-headline swiper-lazy swiper-lazy-loaded" src="https://www1.djicdn.com/cms/uploads/f96569e53307cad64f824f940a968c6c.svg">
+                <h2 class="headline visuallyhidden">osmo-pocket-3</h2>
+                <h3 class="banner-slogan">For Moving Moments</h3>
+            </div>
+            <div class="banner-btn-box"> 
+                <a href="https://www.dji.com/global/mavic-3-pro?site=brandsite&amp;from=homepage" data-ga-category="pc-homepage" data-ga-action="click" data-ga-label="kv-banner_mavic-3-pro_learn-more-link" aria-label="Learn More mavic-3-pro" class="banner-button ga-data" tabindex="0">
+                    <div class="text btton">Learn More</div>
+                    <div class="icon fa fa-angle-right"></div>
+                </a>
+                <a href="https://www.dji.com/global/where-to-buy" data-ga-category="pc-homepage" data-ga-action="click" data-ga-label="kv-banner_mavic-3-pro_buy-now-link" aria-label="Buy Now mavic-3-pro" class="banner-button ga-data" tabindex="0">
+                    <div class="text btton">Buy Now</div>
+                    <div class="icon fa fa-angle-right">
+                    </div>
+                </a>
+            </div>
+          </div>
+          <div class="carousel-item" id="carouselFive">
+            <div class="banner-text">
+                <div class="top-content">
+                    <div class="eyebrow-text eyebrow">1″ CMOS Pocket Gimbal Camera                        
+                    </div>
+                </div>
+                <img style="height:32px" alt="osmo-pocket-3" class="banner-logo banner-headline swiper-lazy swiper-lazy-loaded" src="https://www1.djicdn.com/cms/uploads/f96569e53307cad64f824f940a968c6c.svg">
+                <h2 class="headline visuallyhidden">osmo-pocket-3</h2>
+                <h3 class="banner-slogan">For Moving Moments</h3>
+            </div>
+            <div class="banner-btn-box"> 
+                <a href="https://www.dji.com/global/mavic-3-pro?site=brandsite&amp;from=homepage" data-ga-category="pc-homepage" data-ga-action="click" data-ga-label="kv-banner_mavic-3-pro_learn-more-link" aria-label="Learn More mavic-3-pro" class="banner-button ga-data" tabindex="0">
+                    <div class="text btton">Learn More</div>
+                    <div class="icon fa fa-angle-right"></div>
+                </a>
+                <a href="https://www.dji.com/global/where-to-buy" data-ga-category="pc-homepage" data-ga-action="click" data-ga-label="kv-banner_mavic-3-pro_buy-now-link" aria-label="Buy Now mavic-3-pro" class="banner-button ga-data" tabindex="0">
+                    <div class="text btton">Buy Now</div>
+                    <div class="icon fa fa-angle-right">
+                    </div>
+                </a>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+</div>
+
+<div class="itemsDiv">
+    <div class="row">
+        <div class="col-md-6 col-lg-6" id="div1">
+            <div class="products-banner-text theme-dark"><div class="top-content"><div class="eyebow eyebrow-text">Easy Tutorials and One-Tap Editing</div></div><img data-dps-src="82590cc6ac88743528c8bea44274a9d8.svg" style="height: 32px" alt="osmo-mobile-6" class="logo-icon dps-cms lazy-img" src="https://www1.djicdn.com/cms/uploads/82590cc6ac88743528c8bea44274a9d8.svg"><h4 class="headline visuallyhidden">osmo-mobile-6</h4><h5 class="subhead">Unfold Your Creativity</h5><a href="https://www.dji.com/global/osmo-mobile-6?site=brandsite&amp;from=homepage" data-ga-category="pc-homepage" data-ga-action="click" data-ga-label="product-banner_om-6-small_learn-more-link" aria-label="Learn More osmo-mobile-6" class="link-box ga-data"><div class="text">Learn More</div><div class="icon fa fa-angle-right"></div></a><a href="https://www.dji.com/global/where-to-buy" data-ga-category="pc-homepage" data-ga-action="click" data-ga-label="product-banner_om-6-small_buy-now-link" aria-label="Buy Now osmo-mobile-6" class="link-box ga-data"><div class="text">Buy Now</div><div class="icon fa fa-angle-right"></div></a></div>
+        </div>
+        <div class="col-md-6 col-lg-6" id="div2">
+            <div class="products-banner-text theme-dark"><div class="top-content"><div style="color: null;"class="eyebow eyebrow-text">Easy Tutorials and One-Tap Editing</div></div><img data-dps-src="82590cc6ac88743528c8bea44274a9d8.svg" style="height: 32px" alt="osmo-mobile-6" class="logo-icon dps-cms lazy-img" src="https://www1.djicdn.com/cms/uploads/82590cc6ac88743528c8bea44274a9d8.svg"><h4 class="headline visuallyhidden">osmo-mobile-6</h4><h5 class="subhead">Unfold Your Creativity</h5><a href="https://www.dji.com/global/osmo-mobile-6?site=brandsite&amp;from=homepage" data-ga-category="pc-homepage" data-ga-action="click" data-ga-label="product-banner_om-6-small_learn-more-link" aria-label="Learn More osmo-mobile-6" class="link-box ga-data"><div class="text">Learn More</div><div class="icon fa fa-angle-right"></div></a><a href="https://www.dji.com/global/where-to-buy" data-ga-category="pc-homepage" data-ga-action="click" data-ga-label="product-banner_om-6-small_buy-now-link" aria-label="Buy Now osmo-mobile-6" class="link-box ga-data"><div class="text">Buy Now</div><div class="icon fa fa-angle-right"></div></a></div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6 col-lg-6" id="div3">
+            <div class="products-banner-text theme-dark"><div class="top-content"><div style="color: null; height: " class="eyebow eyebrow-text">Easy Tutorials and One-Tap Editing</div></div><img data-dps-src="82590cc6ac88743528c8bea44274a9d8.svg" style="height: 32px" alt="osmo-mobile-6" class="logo-icon dps-cms lazy-img" src="https://www1.djicdn.com/cms/uploads/82590cc6ac88743528c8bea44274a9d8.svg"><h4 class="headline visuallyhidden">osmo-mobile-6</h4><h5 class="subhead">Unfold Your Creativity</h5><a href="https://www.dji.com/global/osmo-mobile-6?site=brandsite&amp;from=homepage" data-ga-category="pc-homepage" data-ga-action="click" data-ga-label="product-banner_om-6-small_learn-more-link" aria-label="Learn More osmo-mobile-6" class="link-box ga-data"><div class="text">Learn More</div><div class="icon fa fa-angle-right"></div></a><a href="https://www.dji.com/global/where-to-buy" data-ga-category="pc-homepage" data-ga-action="click" data-ga-label="product-banner_om-6-small_buy-now-link" aria-label="Buy Now osmo-mobile-6" class="link-box ga-data"><div class="text">Buy Now</div><div class="icon fa fa-angle-right"></div></a></div>
+        </div>
+        <div class="col-md-6 col-lg-6" id="div4">
+            <div class="products-banner-text theme-dark"><div class="top-content"><div style="color: null; height: " class="eyebow eyebrow-text">All-In-One Mini Drone</div></div><img data-dps-src="79944970c7d71630e6a98f34d1764670.svg" style="height: " alt="mini-4-pro" class="logo-icon dps-cms lazy-img" src="https://www1.djicdn.com/cms/uploads/79944970c7d71630e6a98f34d1764670.svg"><h4 class="headline visuallyhidden">mini-4-pro</h4><h5 class="subhead">Mini to the Max</h5><a href="https://www.dji.com/global/mini-4-pro?site=brandsite&amp;from=homepage" data-ga-category="pc-homepage" data-ga-action="click" data-ga-label="product-banner_mini-4-pro-small_learn-more-link" aria-label="Learn More mini-4-pro" class="link-box ga-data"><div class="text">Learn More</div><div class="icon fa fa-angle-right"></div></a><a href="https://www.dji.com/global/where-to-buy" data-ga-category="pc-homepage" data-ga-action="click" data-ga-label="product-banner_mini-4-pro-small_buy-now-link" aria-label="Buy Now mini-4-pro" class="link-box ga-data"><div class="text">Buy Now</div><div class="icon fa fa-angle-right"></div></a></div>
+        </div>
+    </div>
+</div>
+
+<div class="fileds" >
+    <h1 style="text-align:center;padding: 40px 0px;">Explore DJI Products in Different Fields</h1>
+    <div class="row"  style="display:flex; justify-content: center;color: #fff;gap: 10px;">
+        <div class="col-md-1 col-lg-1 col-sm-1 col-xs-12 col-xs-1"></div>
+        <div class="col-md-3 col-lg-3 col-sm-3 col-xs-12 col-xs-3 filedsDiv" id="filedsDiv1">
+            <h2 style="text-align:center;">Vedio Production</h2>
+            <p style="text-align:center;">
+                Professional Aerial and Ground Filmmakking Tools
+            </p>
+            <p style="text-align:center;">Learn More ></p>
+
+        </div>
+        <div class="col-md-3 col-lg-3 col-sm-3 col-xs-12 col-xs-3 filedsDiv" id="filedsDiv2">
+            <h2 style="text-align:center;">Enterprise</h2>
+            <p style="text-align:center;">
+                Drone sollution for a new Generation pf Work
+            </p>
+            <p style="text-align:center; ">Learn More ></p>
+
+        </div>
+        <div class="col-md-3 col-lg-3 col-sm-3 col-xs-12 col-xs-3 filedsDiv" id="filedsDiv3">
+            <h2 style="text-align:center;">Agriculture</h2>
+            <p style="text-align:center;">
+                Efficient and Intelligent Agricultureal Solutions
+            </p>
+            <p style="text-align:center;">Learn More ></p>
+        </div>
+        <div class="col-md-1 col-lg-1 col-sm-1 col-xs-12 col-xs-1"></div>
+    </div>
+</div>
+
+<div class="cart" style="background-color: rgb(211, 208, 208);margin-top: 70px;">
+    <div class="row"  style="display:flex; justify-content: center;color:black;gap: 10px;">
+        <div class="col-md-1 col-lg-1 col-sm-1 col-xs-12 col-xs-1"></div>
+        <div class="col-md-3 col-lg-3 col-sm-3 col-xs-12 col-xs-3 cartDiv" id="cartDiv1">
+            <img data-dps-src="94964ecb1bc4c100c42c93a814bd4733.svg" alt="Where to buy" class="icon dps-cms lazy-img" src="https://www1.djicdn.com/cms/uploads/94964ecb1bc4c100c42c93a814bd4733.svg">
+            <h2 style="text-align:center;">where-to-buy</h2>
+            <p style="text-align:center;">Learn More ></p>
+
+        </div>
+        <div class="col-md-3 col-lg-3 col-sm-3 col-xs-12 col-xs-3 cartDiv" id="cartDiv2">
+            <img data-dps-src="60ff58dae8a3fffc6a6e292ce587ca46.svg" alt="Support" class="icon dps-cms lazy-img" src="https://www1.djicdn.com/cms/uploads/60ff58dae8a3fffc6a6e292ce587ca46.svg">
+            <h2 style="text-align:center;">Support</h2>
+            <p style="text-align:center; ">Learn More ></p>
+
+        </div>
+        <div class="col-md-3 col-lg-3 col-sm-3 col-xs-12 col-xs-3 cartDiv" id="cartDiv3">
+            <img data-dps-src="e5878a0a23f0c8b05878dac1e0293dfd.svg" alt="Fly Safe" class="icon dps-cms lazy-img" src="https://www1.djicdn.com/cms/uploads/e5878a0a23f0c8b05878dac1e0293dfd.svg">
+            <h2 style="text-align:center;">Fly Safe</h2>
+            <p style="text-align:center;">Learn More ></p>
+        </div>
+        <div class="col-md-1 col-lg-1 col-sm-1 col-xs-12 col-xs-1"></div>
+    </div>
+</div>
+
+<footer style="background-color: rgb(43, 40, 40);color: white; font-size: 13px;">
+    <div class="foterUl" style="display: flex;flex-wrap: wrap; padding: 50px 0px;">
+        <ul>
+            <li>Product Categories</li>
+            <li>Consumer</li>
+            <li>Professional</li>
+            <li>Enterprise</li>
+            <li>Components</li>
+        </ul>
+        <ul>
+            <li>Service Plans</li>
+            <li>DJI Care Refresh</li>
+            <li>DJI Care Pro</li>
+            <li>DJI Care Enterprise</li>
+            <li>DJI Maintenance Program</li>
+        </ul>
+        <ul>
+            <li>Where to Buy</li>
+            <li>DJI Online Store</li>
+            <li>Flagship Stores</li>
+            <li>DJI-Operated Stores</li>
+            <li>Retail Stores</li>
+        </ul>
+        <ul>
+            <li>Cooperation</li>
+            <li>Become a Dealer</li>
+            <li>Apply For Authorized Store</li>
+
+        </ul>
+        <ul>
+            <li>Apply For Authorized Store</li>
+            <li>Fly Safe</li>
+            <li>DJI Flying Tips</li>
+        </ul>
+        <ul>
+            <li>Support</li>
+            <li>Download Center</li>
+            <li>After-Sales Service Policies</li>
+            <li> Help Center</li>
+            <li>Security and Privacy</li>
+            <li>Service Request and Inquiry</li>
+            <li>Product Support</li>
+        </ul>
+        <ul>
+            <li>STEAM Education</li>
+            <li>Buying Guides</li>
+            <li>Newsroom</li>
+            <li>Explore</li>
+        </ul>
+        <ul>
+            <li>Community</li>
+            <li>SkyPixe</li>
+            <li>lDJI Forum</li>
+            <li>Developer</li>
+        </ul>
+        <ul>
+            <li>Subscribe</li>
+            <li>Get the latest news from DJI</li>
+            <li><input type="text" placeholder="E-Mail"></li>
+        </ul>
+    </div>
+
+    <ul class="social" style="display: flex; justify-content: center;padding-bottom: 50px;">
+        <li>
+            <img alt="Facebook" src="www5.djicdn.com/uploads/footer_social/cover/1792/793cb64aaae69d1dd1b478336fd1b42e.png">
+        </li>
+        <li>
+            <img alt="Twitter" src="www1.djicdn.com/uploads/footer_social/cover/1793/105b8e21b480b216ba171a0fa39cc3b7.png">
+        </li>
+        <li>
+            <img alt="Youtube" src="www3.djicdn.com/uploads/footer_social/cover/1794/8f24c284378a0920e6df15c87c4b9b59.png">
+        </li>
+        <li>
+            <img alt="Vimeo" src="www2.djicdn.com/uploads/footer_social/cover/1797/bdea782ad15bc2dda49f5b2ceeac17b9.png">
+        </li>
+        <li>
+            <img alt="Instagram" src="www1.djicdn.com/uploads/footer_social/cover/1798/51bab9bb7867de27a68b9ea14ae8f8b3.png">
+        </li>
+    </ul>
+    </footer>
+
+</body>
+</html>
